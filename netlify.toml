@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  DATABASE_URL = "file:./prisma/dev.db"
+  NEXT_PRIVATE_STANDALONE = "true"
